@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title> home </title>
+  <style>
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #container > a {
+      border-radius: 15px;
+      text-decoration: none;
+      color: black;
+      background-color: cornflowerblue;
+      width: auto;
+      height: auto;
+      margin: 10px;
+      padding: 15px;
+    }
+    h3 {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+<h1> Welcome To Home Page </h1>
+<h3 style = "color: cornflowerblue;"> Pick your service: </h3>
+<div id = "container">
+  <a href="/login">Login</a>
+  <a th:href="@{'/students/' + ${id} + '/marks' }" > view all marks </a>
+  <a th:href="@{'/students/' + ${id} + '/mark' }" > view single mark </a>
+  <a th:href="@{'/students/' + ${id} + '/average' }" > view course average </a>
+  <a th:href="@{'/students/' + ${id} + '/max' }" > view course max mark  </a>
+  <a th:href="@{'/students/' + ${id} + '/min' }"> view single min mark </a>
+</div>
+</body>
+</html>

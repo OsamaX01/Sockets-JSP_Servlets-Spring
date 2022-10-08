@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Choose</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Choose Course</h1>
+<form action="#" th:action="@{/students/__${id}__/__${route}__}" th:object="${mark}" method="post">
+    <p>
+        <label for="course"> Choose Course </label>
+        <select th:field="*{name}" name="course" id="course">
+            <option value="cpp"> CPP </option>
+            <option value="java"> JAVA </option>
+            <option value="ruby"> Ruby </option>
+        </select>
+    </p>
+
+    <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    </p>
+</form>
+</body>
+</html>
